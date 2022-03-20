@@ -38,10 +38,12 @@ figure {
 
 .marge-page {
       width: 70%;
-      display: flex;
+      /* Pas besoin de créer un conteneur flex pour faire le centrage, juste width et marges auto */
+      margin:auto;
+      /*display: flex;
       flex-direction: column;
       justify-content: center;
-      align-self: center;
+      align-self: center;*/
 }
 
 .logo {
@@ -130,7 +132,8 @@ footer {
 .section-1 h2 {
       text-align: center;
       width: 100%;
-      line-height: 0;
+      /* Attention, le minimum pour le line-height est 1. Avec la valeur 0 le texte se chevauche en réduisant la largeur du conteneur */
+      /* line-height: 0; */
 }
 
 .section-1 {
@@ -201,9 +204,10 @@ font-size: 62.5%;
 }
 
 body {
-display: flex;
+/* Pas besoin de mettre le body en conteneur flex */
+/*display: flex;
 justify-content: center;
-align-items: center;
+align-items: center;*/
 /* Adapter la famille de polices selon le projet */
 font-family: 'Roboto Condensed', sans-serif;
 font-weight: 300;
